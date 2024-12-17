@@ -1,0 +1,26 @@
+/* グローバルスタイルをここに追加 */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nico Moji";
+}
+
+header {
+  background-color: #f0f2f5;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+}
+
+footer {
+  background-color: #f0f2f5;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 20px;
+  color: #333;
+}

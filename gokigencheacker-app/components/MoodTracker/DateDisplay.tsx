@@ -1,18 +1,13 @@
 import React from "react";
 
-import { DateDisplay as StyledDateDisplay, Header } from "./styles";
+import { DateDisplay as StyledDateDisplay } from "./styles";
 
 interface DateDisplayProps {
   date: string;
 }
 
 const DateDisplay: React.FC<DateDisplayProps> = ({ date }) => {
-  return (
-    <StyledDateDisplay>
-      <Header>ゴキゲンナビ</Header>
-      {date}
-    </StyledDateDisplay>
-  );
+  return <StyledDateDisplay>{date}</StyledDateDisplay>;
 };
 
 export default DateDisplay;

@@ -59,9 +59,9 @@ export const DateDisplay = styled.div`
   text-align: center; /* テキストを中央揃え */
 `;
 
-export const Header = styled.h1`
-  font-family: "Nico Moji", sans-serif; /* フォントファミリーをNico Mojiに設定 */
-  font-size: 100px; /* フォントサイズを100pxに設定 */
-  color: #333; /* テキストの色を#333に設定 */
-  text-align: center; /* テキストを中央揃え */
-`;
+// export const Header = styled.h1`
+//   font-family: "Nico Moji", sans-serif; /* フォントファミリーをNico Mojiに設定 */
+//   font-size: 100px; /* フォントサイズを100pxに設定 */
+//   color: #333; /* テキストの色を#333に設定 */
+//   text-align: center; /* テキストを中央揃え */
+// `;
