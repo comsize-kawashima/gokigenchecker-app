@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { DateDisplay as StyledDateDisplay } from "./styles";
+import { DateDisplay as StyledDateDisplay, DayName } from "./styles";
 
-interface DateDisplayProps {
-  date: string;
-}
+const DateDisplay = () => {
+  const [selectedDate] = useState(new Date());
+  const dayNames = ["日", "月", "火", "水", "木", "金", "土"];
 
-const DateDisplay: React.FC<DateDisplayProps> = ({ date }) => {
-  return <StyledDateDisplay>{date}</StyledDateDisplay>;
+  const formattedDate = selectedDate.toISOString().slice(0, 10);
+  const dayName = dayNames[selectedDate.getDay()];
+
+  return (
+    <StyledDateDisplay>
+      {formattedDate}
+      <DayName>（{dayName}）</DayName>
+    </StyledDateDisplay>
+  );
 };
 
 export default DateDisplay;
