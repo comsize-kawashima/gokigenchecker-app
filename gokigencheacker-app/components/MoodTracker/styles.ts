@@ -13,7 +13,7 @@ export const AppContainer = styled.div`
   justify-content: flex-start; /* 子要素を垂直方向に上部に揃え */
   min-height: 100vh; /* コンテナの最小高さを100%のビュー高さに設定 */
   background-color: #f0f2f5; /* 背景色を設定 */
-  font-family: "Arial", sans-serif; /* フォントファミリーを設定 */
+  font-family: "Nico Moji", sans-serif; /* フォントファミリーを設定 */
   padding-top: 40px; /* 上部に40pxのパディングを追加 */
 `;
 
@@ -52,11 +52,19 @@ export const MoodButton = styled.button<MoodButtonProps>`
 `;
 
 export const DateDisplay = styled.div`
-  font-family: "Nico Moji", sans-serif; /* フォントファミリーをNico Mojiに設定 */
   margin: 20px; /* 周囲に20pxのマージンを追加 */
-  font-size: 30px; /* フォントサイズを30pxに設定 */
+  padding: 10px; /* 内側に10pxのパディングを追加 */
+  font-size: 25px; /* フォントサイズを25pxに設定 */
   color: #333; /* テキストの色を#333に設定 */
   text-align: center; /* テキストを中央揃え */
+  position: relative; /* 必要に応じてpositionプロパティを使用 */
+  top: 40px; /* 必要に応じてtopプロパティを使用して縦の位置を調整 */
+`;
+
+export const DayName = styled.span`
+  font-size: 20px; /* フォントサイズを20pxに設定 */
+  color: #333; /* テキストの色を#666に設定 */
+  font-family: "Nico Moji";
 `;
 
 // export const Header = styled.h1`

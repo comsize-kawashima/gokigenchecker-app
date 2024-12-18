@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 import DateDisplay from "./DateDisplay"; // インポートパスを修正
 import MoodButtonContainer from "./MoodButtonContainer";
@@ -11,10 +11,10 @@ interface Mood {
 }
 
 const MoodTracker: React.FC = () => {
-  const [selectedDate] = useState(new Date());
+  // const [selectedDate] = useState(new Date());
 
   // ISO形式で日付をフォーマットし、年月日部分だけを切り出して表示
-  const formattedDate = selectedDate.toISOString().slice(0, 10); // YYYY-MM-DD形式
+  // const formattedDate = selectedDate.toISOString().slice(0, 10); // YYYY-MM-DD形式
 
   const moods: Mood[] = [
     { id: 1, icon: "😭", color: "#FFDAB9" },
@@ -34,7 +34,7 @@ const MoodTracker: React.FC = () => {
 
   return (
     <AppContainer>
-      <DateDisplay date={formattedDate} />
+      <DateDisplay />
       <MoodButtonContainer moods={moods} onMoodSelect={handleMoodSelect} />
     </AppContainer>
   );
