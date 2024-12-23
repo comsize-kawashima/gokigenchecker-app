@@ -1,29 +1,33 @@
-/* グローバルスタイルをここに追加 */
+/* グローバルスタイル */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif; /* モダンなフォントに変更 */
+  color: #333; /* ベーシックな文字色 */
+  background: #f7f8fa; /* 軽いグレーの背景色でリラックス感を出す */
 }
 
 header {
-  background-color: #f0f2f5;
-  padding: 5px;
+  background-color: #006d77; /* 深いティール色でスタイリッシュに */
+  padding: 20px 10px; /* 上下のパディングを調整 */
   text-align: center;
-  font-size: 35px;
-  color: #333;
-  font-family: "Nico Moji";
+  font-size: 24px; /* サイズを少し小さくして洗練された印象に */
+  color: #ffffff; /* テキストの色を白に変更 */
+  font-family: "Nico Moji", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 上方向に影を調整 */
 }
 
 footer {
-  background-color: #343a40; /* 背景色を変更 */
-  padding: 20px; /* パディングを増やす */
+  background-color: #83c5be; /* 明るいアクアマリン色でフレッシュに */
+  padding: 15px; /* パディングを統一 */
   text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
-  font-size: 20px;
-  color: #fff; /* テキストの色を白に変更 */
-  font-family: "Nico Moji";
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-  border-top: 3px solid #495057; /* 上部にボーダーを追加 */
+  font-size: 16px; /* サイズを少し小さくしてスマートに */
+  color: #ffffff; /* テキストの色を白に変更 */
+  font-family: "Nico Moji", sans-serif;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 上方向に影を調整 */
+  right: 0; /* 位置調整で右端がはみ出さないように */
 }
