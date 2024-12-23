@@ -1,6 +1,7 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
-import DateDisplay from "./DateDisplay"; // インポートパスを修正
+import Calendar from "./Calendar";
+import DateDisplay from "./DateDisplay";
 import MoodButtonContainer from "./MoodButtonContainer";
 import { AppContainer } from "./styles";
 
@@ -10,11 +11,13 @@ interface Mood {
   color: string;
 }
 
-const MoodTracker: React.FC = () => {
-  // const [selectedDate] = useState(new Date());
+interface MoodData {
+  date: string;
+  mood: Mood;
+}
 
-  // ISO形式で日付をフォーマットし、年月日部分だけを切り出して表示
-  // const formattedDate = selectedDate.toISOString().slice(0, 10); // YYYY-MM-DD形式
+const MoodTracker: React.FC = () => {
+  const [moodData, setMoodData] = useState<MoodData[]>([]);
 
   const moods: Mood[] = [
     { id: 1, icon: "😭", color: "#FFDAB9" },
@@ -25,6 +28,10 @@ const MoodTracker: React.FC = () => {
   ];
 
   const handleMoodSelect = (mood: Mood) => {
+    const selectedDate = new Date().toISOString().slice(0, 10); // YYYY-MM-DD形式
+    const newMoodData = { date: selectedDate, mood };
+    setMoodData([...moodData, newMoodData]);
+
     // クリックされたボタンの情報をコンソールに表示
     console.log("Selected mood:", mood);
 
@@ -36,6 +43,7 @@ const MoodTracker: React.FC = () => {
     <AppContainer>
       <DateDisplay />
       <MoodButtonContainer moods={moods} onMoodSelect={handleMoodSelect} />
+      <Calendar moodData={moodData} />
     </AppContainer>
   );
 };

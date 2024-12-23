@@ -6,7 +6,10 @@ const DateDisplay = () => {
   const [selectedDate] = useState(new Date());
   const dayNames = ["日", "月", "火", "水", "木", "金", "土"];
 
-  const formattedDate = selectedDate.toISOString().slice(0, 10);
+  const year = selectedDate.getFullYear();
+  const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+  const day = String(selectedDate.getDate()).padStart(2, "0");
+  const formattedDate = `${year}/${month}/${day}`;
   const dayName = dayNames[selectedDate.getDay()];
 
   return (

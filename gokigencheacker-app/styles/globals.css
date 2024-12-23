@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nico Moji";
 }
 
 header {
@@ -12,15 +11,19 @@ header {
   text-align: center;
   font-size: 35px;
   color: #333;
+  font-family: "Nico Moji";
 }
 
 footer {
-  background-color: #f0f2f5;
-  padding: 10px;
+  background-color: #343a40; /* 背景色を変更 */
+  padding: 20px; /* パディングを増やす */
   text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
   font-size: 20px;
-  color: #333;
+  color: #fff; /* テキストの色を白に変更 */
+  font-family: "Nico Moji";
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  border-top: 3px solid #495057; /* 上部にボーダーを追加 */
 }
