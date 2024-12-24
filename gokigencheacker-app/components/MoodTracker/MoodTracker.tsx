@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Calendar from "./Calendar";
 import DateDisplay from "./DateDisplay";
-import MoodButtonContainer from "./MoodButtonContainer";
+import MoodButton from "./MoodButton";
 import { AppContainer } from "./styles";
 
 interface Mood {
@@ -42,7 +42,7 @@ const MoodTracker: React.FC = () => {
   return (
     <AppContainer>
       <DateDisplay />
-      <MoodButtonContainer moods={moods} onMoodSelect={handleMoodSelect} />
+      <MoodButton moods={moods} onMoodSelect={handleMoodSelect} />
       <Calendar moodData={moodData} />
     </AppContainer>
   );

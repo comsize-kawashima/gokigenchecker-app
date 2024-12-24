@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-interface MoodButtonProps {
-  mood: {
-    color: string;
-  };
+interface Mood {
+  id: number;
+  icon: string;
+  color: string;
 }
 export const HeaderContainer = styled.header`
   background-color: #f0f2f5; /* 背景色を設定 */
@@ -37,38 +37,36 @@ export const AppContainer = styled.div`
   padding-top: 40px; /* 上部に40pxのパディングを追加 */
 `;
 
-export const MoodButtonContainer = styled.div`
-  display: flex; /* フレックスボックスレイアウトを使用 */
-  flex-direction: row; /* 子要素を横に並べる */
-  justify-content: center; /* 子要素を水平方向に中央揃え */
-  align-items: center; /* 子要素を垂直方向に中央揃え */
-  margin-top: -60px; /* 上部に20pxのマージンを追加 */
-  margin-bottom: -10px; /* 下部に20pxのマージンを追加 */
+export const StyledMoodButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 `;
 
-export const MoodButton = styled.button<MoodButtonProps>`
-  background-color: ${({ mood }) =>
-    mood.color}; /* ボタンの背景色をmoodオブジェクトのcolorプロパティに基づいて設定 */
-  border: none; /* ボーダーをなしに設定 */
-  border-radius: 50%; /* ボタンを円形にするためにボーダー半径を50%に設定 */
-  width: 60px; /* ボタンの幅を60pxに設定 */
-  height: 60px; /* ボタンの高さを60pxに設定 */
-  margin: 20px; /* ボタンの周囲に20pxのマージンを追加 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボタンに影を追加 */
-  cursor: pointer; /* カーソルをポインターに変更 */
-  display: flex; /* フレックスボックスレイアウトを使用 */
-  align-items: center; /* 子要素を垂直方向に中央揃え */
-  justify-content: center; /* 子要素を水平方向に中央揃え */
-  color: white; /* テキストの色を白に設定 */
-  font-size: 24px; /* フォントサイズを24pxに設定 */
-  transition: transform 0.1s ease; /* 変形のトランジションを設定 */
+export const StyledMoodButton = styled.button<{ mood: Mood }>`
+  background-color: ${({ mood }) => mood.color};
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.1s ease;
 
   &:focus {
-    outline: none; /* フォーカス時のアウトラインをなしに設定 */
+    outline: none;
   }
 
   &:active {
-    transform: scale(0.9); /* クリック時にボタンを縮小 */
+    transform: scale(0.9);
   }
 `;
 
@@ -79,7 +77,7 @@ export const DateDisplay = styled.div`
   color: #333; /* テキストの色を#333に設定 */
   text-align: center; /* テキストを中央揃え */
   position: relative; /* 必要に応じてpositionプロパティを使用 */
-  top: -50px; /* 必要に応じてtopプロパティを使用して縦の位置を調整 */
+  top: -30px; /* 必要に応じてtopプロパティを使用して縦の位置を調整 */
   // font-family: "Nico Moji";
 `;
 

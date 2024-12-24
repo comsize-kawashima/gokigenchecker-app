@@ -31,7 +31,10 @@ const Calendar: React.FC<CalendarProps> = ({ moodData }) => {
         const date = new Date(
           new Date().getFullYear(),
           new Date().getMonth(),
-          day
+          day,
+          12,
+          0,
+          0 // 正午に設定してタイムゾーンの影響を避ける
         )
           .toISOString()
           .slice(0, 10);

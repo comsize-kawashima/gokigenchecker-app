@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MoodButton as StyledMoodButton } from "./styles";
+import { StyledMoodButton, StyledMoodButtonContainer } from "./styles";
 
 interface Mood {
   id: number;
@@ -8,12 +8,12 @@ interface Mood {
   color: string;
 }
 
-interface MoodButtonProps {
-  mood: Mood;
-  onClick: () => void;
+interface MoodButtonContainerProps {
+  moods: Mood[];
+  onMoodSelect: (mood: Mood) => void;
 }
 
-const MoodButton: React.FC<MoodButtonProps> = ({ mood, onClick }) => {
+const MoodButton = ({ mood, onClick }: { mood: Mood; onClick: () => void }) => {
   return (
     <StyledMoodButton mood={mood} onClick={onClick}>
       {mood.icon}
@@ -21,4 +21,21 @@ const MoodButton: React.FC<MoodButtonProps> = ({ mood, onClick }) => {
   );
 };
 
-export default MoodButton;
+const MoodButtonContainer: React.FC<MoodButtonContainerProps> = ({
+  moods,
+  onMoodSelect,
+}) => {
+  return (
+    <StyledMoodButtonContainer>
+      {moods.map((mood) => (
+        <MoodButton
+          key={mood.id}
+          mood={mood}
+          onClick={() => onMoodSelect(mood)}
+        />
+      ))}
+    </StyledMoodButtonContainer>
+  );
+};
+
+export default MoodButtonContainer;
